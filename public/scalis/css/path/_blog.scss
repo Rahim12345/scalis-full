@@ -1,0 +1,200 @@
+.blog {
+  position: relative;
+  padding: 60px 80px;
+  background-color: #fff;
+
+  figure {
+    background: linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
+    img {
+      position: relative;
+      display: block;
+      min-height: 100%;
+      max-width: 100%;
+      opacity: 0.8;
+    }
+    figcaption {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      &::before {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        bottom: 30px;
+        left: 30px;
+        border: 1px solid #fff;
+        content: "";
+        pointer-events: none;
+      }
+    }
+  }
+  figure {
+    position: relative;
+    overflow: hidden;
+    background: #3085a3;
+    cursor: pointer;
+    margin: 10px 1%;
+    img {
+      opacity: 0.9;
+      transition: opacity 0.35s;
+    }
+    figcaption {
+      padding: 3em;
+      background-color: rgba(58, 52, 42, 0.1);
+      transition: background-color 0.35s;
+      backface-visibility: hidden;
+      &::before {
+        opacity: 0;
+        transition: opacity 0.35s, transform 0.35s;
+        transform: scale(0);
+      }
+    }
+    &:hover img {
+      opacity: 0.4;
+    }
+    &:hover figcaption {
+      background-color: rgba(2, 169, 253, 0.2);
+    }
+    &:hover figcaption::before {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .container-fluid {
+    max-width: 1450px;
+    .main_blog {
+      .blog_top {
+        display: flex;
+        .text {
+          display: flex;
+          flex-shrink: 0;
+          justify-content: flex-start;
+          flex-direction: column;
+          position: relative;
+          .btn {
+            background: #f1f1f1;
+            position: absolute;
+            bottom: 4%;
+            text-transform: uppercase;
+            padding: 10px 40px;
+            transition: all ease 0.3s;
+            &:hover {
+              background: #dfdddd;
+            }
+          }
+          h2 {
+            font-size: 60px;
+            line-height: 60px;
+            font-weight: 600;
+            padding: 30px 0px;
+            span {
+              font-weight: 300;
+            }
+          }
+        }
+        .image {
+          position: relative;
+          overflow: hidden;
+          cursor: pointer;
+        }
+      }
+      .blog_bottom {
+        width: 100%;
+        margin-bottom: 4rem;
+        padding: 60px 20px;
+        h2 {
+          padding: 20px 0;
+          font-size: 25px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+        .alt_blogs {
+          width: 100%;
+          display: grid;
+          grid-gap: 60px;
+          grid-template-columns: repeat(3, 1fr);
+
+          .blog_one {
+            position: relative;
+            overflow: initial;
+            height: auto;
+            cursor: pointer;
+            img {
+              max-width: 100%;
+              max-height: 500px;
+             
+              object-fit: cover;
+            }
+            h3 {
+              font-weight: 600;
+              text-transform: uppercase;
+              font-size: 23px;
+              padding: 10px 0;
+            }
+            p {
+              color: #4e4e4e;
+            }
+            figure img {
+              position: relative;
+              display: block;
+              min-height: 100%;
+              max-width: 100%;
+              opacity: 0.8;
+              figcaption {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 2em;
+                color: #fff;
+                backface-visibility: hidden;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.blog_one{
+    position: relative;
+    padding: 60px 80px;
+    background-color: #fff;
+    .container-fluid{
+        max-width: 1450px;
+        .row{
+            justify-content: center;
+            .image{
+                width: 100%;
+                display: grid;
+                grid-gap: 60px;
+                grid-template-columns: repeat(1, 1fr);
+                figure{
+                    max-height: 604px;
+                    img{
+                        max-width: 100%;
+                        max-height: 100%;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .text{
+                h2{
+                    font-size: 60px;
+                    line-height: 60px;
+                    font-weight: 600;
+                    padding: 30px 0px;
+                    span {
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}
